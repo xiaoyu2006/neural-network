@@ -17,3 +17,7 @@ See the result
 >>> network.query(feature)
 ```
 Also change the learningrate by using ```network.lr=newlearningrate```
+## Application
+A small example of MNIST.
+## Tip
+You can use ```plckle``` to save the neural network.

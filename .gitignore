@@ -1,3 +1,6 @@
 .vscode/
 *.pyc
-application.py
+venv/
+mnist_test.csv
+mnist_train.csv
+MNIST.neuralnetwork
