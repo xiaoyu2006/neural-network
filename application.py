@@ -7,7 +7,7 @@ data_list=f.readlines()
 f.close()
 
 # TRAIN
-epochs=1
+epochs=5
 for _ in range(epochs):
     print "The %dth epochs."%(_+1)
     count=0
