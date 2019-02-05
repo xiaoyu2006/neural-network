@@ -45,5 +45,5 @@ for record in data_list:
     label=np.argmax(outputs)
     if label==correct_label:
         right+=1
-    sum+=1
+    s+=1
 print "performance =",float(right)/float(s)
