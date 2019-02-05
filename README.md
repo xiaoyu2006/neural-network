@@ -16,5 +16,4 @@ See the result
 # feature=[...]
 >>> network.query(feature)
 ```
-Also change the learnrate by using ```network.lr=newlearningrate```
-## (づ ●─● )づ
+Also change the learningrate by using ```network.lr=newlearningrate```
