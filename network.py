@@ -14,7 +14,7 @@ class NeuralNetwork(object):
         self.lr=learningrate
         self.activation_func=sigmoid
     
-    def train(self,inputs_list,targets_list):# NOT COMPLETED
+    def train(self,inputs_list,targets_list):
         inputs=np.array(inputs_list,ndmin=2).T
         targets=np.array(targets_list,ndmin=2).T
         hidden_inputs=np.dot(self.wih,inputs)
