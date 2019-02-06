@@ -1,13 +1,13 @@
 from network import *
 
-n=NeuralNetwork(784,25,10,0.3)
+n=NeuralNetwork(784,200,10,0.1)
 
 f=open('mnist-data/mnist_train.csv')
 data_list=f.readlines()
 f.close()
 
 # TRAIN
-epochs=2
+epochs=5
 for _ in range(epochs):
     print "The %dth epochs."%(_+1)
     count=0
@@ -24,11 +24,11 @@ for _ in range(epochs):
 del record,data_list,all_values,inputs,targets,count
 
 # SAVE
-#import pickle
-#f=open('MNIST.neuralnetwork','w')
-#pickle.dump(n,f)
-#f.close()
-#del pickle
+import pickle
+f=open('MNIST.neuralnetwork','w')
+pickle.dump(n,f)
+f.close()
+del pickle
 
 # TEST
 right=0

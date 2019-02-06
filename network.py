@@ -1,5 +1,4 @@
 import numpy
-import scipy.special
 
 class NeuralNetwork:
     def __init__(self, inputnodes, hiddennodes, outputnodes, learningrate):
@@ -9,8 +8,12 @@ class NeuralNetwork:
         self.wih = numpy.random.normal(0.0, pow(self.inodes, -0.5), (self.hnodes, self.inodes))
         self.who = numpy.random.normal(0.0, pow(self.hnodes, -0.5), (self.onodes, self.hnodes))
         self.lr = learningrate
-        self.activation_function = lambda x: scipy.special.expit(x)
     
+    # Sigmoid
+    def activation_function(self, x):
+        temp=1+numpy.exp(-x)
+        return 1/temp
+
     def train(self, inputs_list, targets_list):
         inputs = numpy.array(inputs_list, ndmin=2).T
         targets = numpy.array(targets_list, ndmin=2).T
